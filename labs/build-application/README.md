@@ -62,11 +62,11 @@ In this lab we will build Docker containers for each of the application componen
     ```bash
     cd ~/kubernetes-hackfest
 
-    az acr build -t hackfest/data-api:1.0 -r $ACRNAME --no-logs ./app/data-api
-    az acr build -t hackfest/flights-api:1.0 -r $ACRNAME --no-logs ./app/flights-api
-    az acr build -t hackfest/quakes-api:1.0 -r $ACRNAME --no-logs ./app/quakes-api
-    az acr build -t hackfest/weather-api:1.0 -r $ACRNAME --no-logs ./app/weather-api
-    az acr build -t hackfest/service-tracker-ui:1.0 -r $ACRNAME --no-logs ./app/service-tracker-ui
+    az acr build -t hackfest/data-api:1.0 -r $ACRNAME --no-logs -c ./app/data-api
+    az acr build -t hackfest/flights-api:1.0 -r $ACRNAME --no-logs -c ./app/flights-api
+    az acr build -t hackfest/quakes-api:1.0 -r $ACRNAME --no-logs -c ./app/quakes-api
+    az acr build -t hackfest/weather-api:1.0 -r $ACRNAME --no-logs -c ./app/weather-api
+    az acr build -t hackfest/service-tracker-ui:1.0 -r $ACRNAME --no-logs -c ./app/service-tracker-ui
     ```
 
     You can see the status of the builds by running the command below.
